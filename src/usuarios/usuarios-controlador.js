@@ -7,7 +7,7 @@ function criaTokenJWT(usuario) {
     id: usuario.id
   };
 
-  const token = jwt.sign(payload, 'unPQJpH46pmT/AFGqYHVlP1bk/AFz4jwSkwk+F7/Orrc2D23aYOhP0V3FDfRd5tN/SbCNnYPcUSuFE8ZGORyDDWSbLsFISq8lOU7bd6iyBT+xDO6PZM9QXYtpR7rUNBF3fBV9RRS9Sx+7SkWLhKtTRnkD8dKokYsLWzuXB/Zey4+ctGuKwbJL/0xt2UhLqhojSN1ZuulEyr7qypo8K6vMlch5bdvrMngVdwB7/pX9/R5MuLjKhuPtLayuRTpr5LRXkyRVuFvrKKwQIFeKun0aHVsMNhBvzBT31r+nLUFt/28Y2XApLe8Q54ppWoqX0Jg1WFTO/pQRR7wBRCtKPT4/w==');
+  const token = jwt.sign(payload, process.env.CHAVE_JWT);
 
   return token;
 }
